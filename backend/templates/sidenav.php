@@ -1,56 +1,59 @@
-<ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-light accordion border" id="accordionSidebar">
 
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
         </div>
-        <div class="sidebar-brand-text mx-3">ADIDAYA DUTA MITRAKOM</div>
+        <div class="sidebar-brand-text mx-3">
+            <img src="assets/img/brand/adm_lt1.png" class="d-flex mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+        </div>
     </a>
 
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link" href="index.php">
-            <span>D a s h b o a r d</span></a>
+            <span>Dashboard</span></a>
     </li>
 
     <hr class="sidebar-divider">
+    
     <li class="nav-item">
         <a class="nav-link" href="index.php?profile=read">
-            <span>P R O F I L E</span></a>
+            <span>Profile</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>P R O D U K</span></a>
+            <span>Produk</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>P O R T O - F O L I O</span></a>
+            <span>Portofolio</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>N E W S</span></a>
+            <span>News</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>T E A M</span></a>
+            <span>Team</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>C O N T A C - U S</span></a>
+            <span>Contact Us</span></a>
     </li>
 
     <hr class="sidebar-divider">
 
     <div class="sidebar-heading">
-        M e n u - A d m i n
+        Admin Menu
     </div>
 
     <li class="nav-item">
         <a class="nav-link" href="index.php?admin=read">
-            <span>D A T A - A D M I N</span></a>
+            <span>Admin List</span></a>
     </li>
 
     <hr class="sidebar-divider d-none d-md-block">

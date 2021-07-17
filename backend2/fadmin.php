@@ -1,29 +1,31 @@
-<?php 
+<?php
 include '../koneksi.php';
 
 
 ?> 
 <?php
-function query($query) {
+function query($query)
+{
 	global $conn;
 
 	$result = mysqli_query($conn, $query);
 	$rows = [];
-	while( $row = mysqli_fetch_assoc($result) ) {
+	while ($row = mysqli_fetch_assoc($result)) {
 		$rows[] = $row;
 	}
 	return $rows;
 }
 
 
-function ubah_admin($data) {
+function ubah_admin($data)
+{
 	global $conn;
 
 	$id = $data["id"];
 	$userid = htmlspecialchars($data["userid"]);
 	$username = htmlspecialchars($data["username"]);
 	$password = htmlspecialchars($data["password"]);
-	
+
 
 
 	$query = "UPDATE admin SET
@@ -35,11 +37,12 @@ function ubah_admin($data) {
 
 	mysqli_query($conn, $query);
 
-	return mysqli_affected_rows($conn);	
+	return mysqli_affected_rows($conn);
 }
 
 
-function registrasi($data) {
+function registrasi($data)
+{
 
 	global $conn;
 
@@ -50,7 +53,7 @@ function registrasi($data) {
 
 
 	$result = mysqli_query($conn, "SELECT userid FROM admin WHERE userid = '$userid'");
-	if ( mysqli_fetch_assoc($result)) {
+	if (mysqli_fetch_assoc($result)) {
 		echo "<script>alert('User Id Sudah Terdaftar!'); </script>";
 
 		return false;
@@ -58,15 +61,14 @@ function registrasi($data) {
 
 
 
-	if ( $password !== $password2 ) {
+	if ($password !== $password2) {
 		echo "<script>alert('Konfirmasi password tidak sesuai!'); </script>";
-	return false;
+		return false;
 	}
 
 	mysqli_query($conn, "INSERT INTO admin VALUES('', '$userid', '$username', '$password')");
 
 	return mysqli_affected_rows($conn);
-
 }
 
 

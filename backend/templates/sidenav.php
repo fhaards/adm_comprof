@@ -16,20 +16,29 @@
     </li>
 
     <hr class="sidebar-divider">
-    
+
+    <li class="nav-item">
+        <a class="nav-link" href="index.php?company=read">
+            <span>Company</span>
+        </a>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link" href="index.php?profile=read">
-            <span>Profile</span></a>
+            <span>Profile</span>
+        </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>Produk</span></a>
+            <span>Produk</span>
+        </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <span>Portofolio</span></a>
+            <span>Portofolio</span>
+        </a>
     </li>
 
     <li class="nav-item">

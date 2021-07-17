@@ -10,8 +10,6 @@
             <p class="lead mb-5">
                 Content Management System
             </p>
-
-
         </div>
     </div>
 </div>

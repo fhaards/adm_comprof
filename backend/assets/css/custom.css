@@ -46,12 +46,20 @@
 }
 .sidebar li a {
   font-weight: bold;
+  color:#9e9e9e !important;
 }
 .sidebar li a:hover {
   color: #d50000 !important;
 }
+.sidebar li a:hover i {
+  color: #d50000 !important;
+}
 .sidebar li a:active {
   color: #d50000 !important;
+}
+
+#side-text.hide{
+  display: none !important;
 }
 
 /* PAGE TITLE */

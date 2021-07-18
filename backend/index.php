@@ -49,7 +49,7 @@ error_reporting(0);
   }
 
   ?>
-  <script src="assets/js/sb-admin-2.min.js"></script>
+  <script src="assets/js/sb-admin-2.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,14 @@
 (function ($) {
   "use strict"; // Start of use strict
-
+  
   // Toggle the side navigation
   $("#sidebarToggle, #sidebarToggleTop").on("click", function (e) {
     $("body").toggleClass("sidebar-toggled");
+    $(".side-text").show();
     $(".sidebar").toggleClass("toggled");
     if ($(".sidebar").hasClass("toggled")) {
+      $(".side-text").hide();
+      $('[data-toggle="tooltip"]').tooltip();
       $(".sidebar .collapse").collapse("hide");
     }
   });

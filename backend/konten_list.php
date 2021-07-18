@@ -60,5 +60,6 @@ if (!empty($_GET['company'])) {
 		require_once "admin/form_update.php";
 	}
 } else {
+	require_once "dashboard_functions.php";
 	require_once "dashboard.php";
 }

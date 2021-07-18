@@ -19,7 +19,7 @@ if (isset($_POST["submitTeam"])) {
 }
 $team = query("SELECT * FROM team");
 ?>
-<div class="container-fluid mb-3">
+<div class=" mb-3">
 	<div class="d-flex flex-column flex-lg-row flex-md-col justify-content-sm-end align-items-start">
 		<div class="page-title mx-5">
 			<h3> Data <span> Team </span> </h3>
@@ -33,9 +33,9 @@ $team = query("SELECT * FROM team");
 	</div>
 </div>
 
-<div class="container-fluid">
-	<div class="card">
-		<div class="card-body">
+<div class="card">
+	<div class="card-body">
+		<div class="table-responsive">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 				<thead>
 					<tr>
@@ -62,8 +62,7 @@ $team = query("SELECT * FROM team");
 								<a href="index.php?team=update&id=<?= $row["id"]; ?>" class="btn btn-sm btn-info rounded-circle">
 									<i class="fa fa-pen"></i>
 								</a>
-								<a href="index.php?team=delete&id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');"  
-								class="btn btn-sm btn-danger rounded-circle">
+								<a href="index.php?team=delete&id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');" class="btn btn-sm btn-danger rounded-circle">
 									<i class="fa fa-trash"></i>
 								</a>
 							</td>

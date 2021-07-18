@@ -1,5 +1,6 @@
 <?php
-session_start();;
+session_start();
+include "koneksi.php";
 error_reporting(0);
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ error_reporting(0);
   <meta name="author" content="">
 
   <title>ADIDAYA DUTA MITRAKOM</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
   <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="assets/css/sb-admin-2.css" rel="stylesheet">
@@ -22,7 +23,9 @@ error_reporting(0);
 
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/vendor/datatables/jquery.dataTables.min.js"></script> -->
   <script src="assets/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
   <script src="assets/js/custom.js"></script>
 
 </head>

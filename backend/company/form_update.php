@@ -60,7 +60,7 @@ $up_t_c = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `company`"));
     </div>
     <div class="col-md-12">
         <hr>
-        <button type="submit" name="submit" class="btn btn-danger">Update</button>
+        <button type="submit" class="btn btn-danger btn-special"> <span> Edit </span> <i class="fa fa-pen"></i></button>
     </div>
    
 </form>

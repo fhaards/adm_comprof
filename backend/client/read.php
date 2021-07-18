@@ -21,7 +21,7 @@ $client = query("SELECT * FROM `client`");
 ?>
 
 
-<div class="container-fluid mb-3">
+<div class="mb-3">
 	<div class="d-flex flex-column flex-lg-row flex-md-col justify-content-sm-end align-items-start">
 		<div class="page-title mx-5">
 			<h3> Data <span> Client </span> </h3>
@@ -36,13 +36,11 @@ $client = query("SELECT * FROM `client`");
 </div>
 
 
-<div class="container-fluid">
-	<div class="card">
-		<div class="card-body">
-
-			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<div class="card">
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
 				<thead>
-
 					<tr>
 						<th>NO</th>
 						<th>NAMA</th>
@@ -86,13 +84,13 @@ $client = query("SELECT * FROM `client`");
 			<div class="modal-body container">
 				<form action="" method="post" class="" enctype="multipart/form-data">
 					<div class="form-group">
-						
+
 						<label for="nama">Nama : </label>
 						<input type="text" name="nama" id="nama" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="gambar">Gambar :</label>
-						<input type="file" name="gambar" id="gambar" class="form-control">
+						<input type="file" name="gambar" id="gambar" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<button type="submit" name="submitClient" class="btn btn-danger btn-special"><span> Save </span> <i class="fa fa-save"></i></button>

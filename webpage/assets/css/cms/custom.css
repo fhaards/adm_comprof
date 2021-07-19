@@ -1,0 +1,95 @@
+.btn-special {
+  line-height: 0;
+  padding: 10px;
+  transition: 0.5s;
+  border: none;
+  color: #fff;
+  background: #d50000;
+  box-shadow: 0px 5px 20px rgba(241, 65, 65, 0.4);
+}
+
+.btn-special span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-special i {
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.btn-special:hover {
+  background-color: #d32f2f;
+  box-shadow: 0px 2px 2px rgba(241, 65, 65, 0.4);
+}
+.btn-special:hover i {
+  transform: translateX(5px);
+}
+
+/* FORM LOGIN */
+.login-page {
+  background: url(../../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.form-login {
+}
+
+/* SIDEBAR */
+
+.sidebar li {
+  height: 50px;
+  padding: 0px !important;
+  margin: 0 !important;
+}
+.sidebar li a {
+  font-weight: bold;
+  color:#9e9e9e !important;
+}
+.sidebar li a:hover {
+  color: #d50000 !important;
+}
+.sidebar li a:hover i {
+  color: #d50000 !important;
+}
+.sidebar li a:active {
+  color: #d50000 !important;
+}
+
+#side-text.hide{
+  display: none !important;
+}
+
+/* PAGE TITLE */
+.page-title {
+  width: auto;
+  display: flex;
+}
+.page-title span {
+  color: #1b1b1b;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.page-title::before {
+  width: 20px;
+  height: 5px;
+  background-color: #d50000;
+  display: flex;
+  margin-top: 15px;
+  margin-right: 20px;
+  content: "";
+  border-radius: 50px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  background: url(../../img/img_visi_misi.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:#1b1b1b;
+}
+

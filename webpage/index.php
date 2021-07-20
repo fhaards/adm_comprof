@@ -1,8 +1,13 @@
+<?php
+include "koneksi.php";
+include "global_functions.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>PT. Adidaya Duta Mitrakom</title>
@@ -31,14 +36,12 @@
 </head>
 
 <body id="body">
-  <?php
-  include "koneksi.php";
-  ?>
+
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo">
-        <img src="assets/img/brand/adm_lt1.png" alt="">
+        <img src="cms/company/img/<?= $getRowQueryCompany['comp_logo2']; ?>" alt="">
       </a>
 
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -78,8 +81,8 @@
 
   <?php include "hero.php"; ?>
   <main id="main">
-    <?php 
-      $query_company = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `company`"));
+    <?php
+    $query_company = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `company`"));
     ?>
     <?php include "about.php"; ?>
     <?php include "services.php"; ?>
@@ -93,7 +96,7 @@
   <?php include "footer.php"; ?>
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <a href="#" class="whatsapp-btn d-flex align-items-center justify-content-center"><i class='bx bxl-whatsapp bx-tada'></i>  </a>
+  <a href="#" class="whatsapp-btn d-flex align-items-center justify-content-center"><i class='bx bxl-whatsapp bx-tada'></i> </a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -103,9 +106,12 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/tinymce/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/tinymce/tinymce/jquery.tinymce.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 

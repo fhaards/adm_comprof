@@ -5,13 +5,14 @@
             <!-- <h2><span>01 </span>ABOUT US</h2> -->
             <div class="row">
                 <h3>Who <span>We Are</span></h3>
+
             </div>
         </div>
 
         <div id="about-full" class="row d-flex justify-content-center align-items-center">
             <div class="row col-lg-12 d-flex justify-content-center align-items-center">
                 <div class="col-lg-6 p-5 d-flex justify-content-center align-items-center" data-aos="fade-down" data-aos-delay="100">
-                    <img src="assets/img/brand/Based_Logo_longtext_subtitle.png" class="img-fluid" lt="">
+                    <img src="cms/company/img/<?= $getRowQueryCompany['comp_logo2']; ?>" class="img-fluid" lt="">
                 </div>
                 <div class="about-stories-1 row d-flex align-items-center justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
                     <p class="about-stories-paragraph col-lg-8">
@@ -77,16 +78,7 @@
                                     <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>VISI</span><i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                                     <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                                         <hr>
-                                        <p class="text-justify">
-                                            Dalam era efisiensi dan efektifitas saat ini, <span>PT. Adidaya Duta Mitrakom</span> mencanangkan tujuan perusahaan untuk dapat
-                                            menjadikan solusi bagi customer dalam memenuhi kebutuhan
-                                            dan permintaan, sesuai dengan persyaratan Kualitas, Harga
-                                            dan Waktu sehingga customer dapat lebih fokus terhadap main
-                                            business-nya.
-                                            Secara lebih progresif, <span>PT. Adidaya Duta Mitrakom</span> dapat
-                                            menjadi mitra terpercaya dan solusi dalam Bidang-Bidang
-                                            Keahlian yang diperlukan konsumen
-                                        </p>
+                                        <?= htmlspecialchars_decode($getRowQueryCompanyAbout['comp_visi']); ?>
                                     </div>
                                 </li>
                                 <li class="border-r-10 accordion-list2">
@@ -98,35 +90,10 @@
                                     <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                                         <hr>
                                         <ul>
-                                            <li></li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Membentuk SDM yang bekerja keras, serius, terukur, jujur dan bertanggung-jawab dalam melaksanakan tugas.</p>
+                                            <li>
+                                                <?= htmlspecialchars_decode($getRowQueryCompanyAbout['comp_misi']); ?>
                                             </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Menjalin dan menjaga hubungan yang harmonis serta kekompakan SDM / Team Work.</p>
-                                            </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Melaksanakan pekerjaan dengan penuh tanggung-jawab, tepat waktu dan dengan hasil yang baik dan benar sesuai spesifikasi teknis pekerjaan.</p>
-                                            </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Berpikir dan bertindak positif, komunikatif dan inovatif serta kreatif dalam menghadapi setiap kendala pekerjaan internal maupun external.</p>
-                                            </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Memperhatikan dan meningkatkan kemampuan manajemen dan teknis SDM secara berkesinambungan dari waktu ke waktu.</p>
-                                            </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Penyusunan Program yang terencana dengan baik (well organized) untuk ukuran kesuksesan melalui kepuasan konsumen.</p>
-                                            </li>
-                                            <li class="p-1 d-flex flex-row">
-                                                <span class="misi-icon">+</span>
-                                                <p>Mendapatkan citra baik dalam pelayanan jasa saat ini dan di masa mendatang.</p>
-                                            </li>
+
                                         </ul>
                                     </div>
                                 </li>
@@ -136,7 +103,7 @@
 
                     <div class="row d-flex flex-row justify-content-center align-items-center end-about">
                         <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                            <img src="assets/img/brand/Based_Logo_longtext_subtitle.png" class="img-fluid mb-5" lt="">
+                            <img src="cms/company/img/<?= $getRowQueryCompany['comp_logo2']; ?>"  class="img-fluid mb-5" lt="">
                             <h1>
                                 INTERIOR | CIVIL | ME | OFFICE FURNITURE | QUALITY NETWORK SERVICE | SECURITY SYSTEM | SOFTWARE DEVELOPMENT | HARDWARE
                                 | TRADING | MANPOWER OUTSOURCING

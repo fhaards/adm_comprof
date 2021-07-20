@@ -39,7 +39,7 @@ error_reporting(0);
 
 <body id="page-top">
   <?php
-  
+
   if (isset($_SESSION['username'])) {
   ?>
     <div id="wrapper">

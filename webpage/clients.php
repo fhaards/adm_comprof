@@ -10,45 +10,14 @@
         </div>
 
         <div class="row d-flex align-items-start flex-row">
+            <?php
+            $rowClient = getQueryClient("SELECT * FROM `client`");
+            ?>
+            <?php foreach ($rowClient as $rowsClient) : ?>
             <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                <img src="cms/client/img/<?= $rowsClient['gambar']; ?>" class="img-fluid" alt="<?= $rowsClient['nama']; ?>">
             </div>
-
-            <div class="client-box  col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="client-box  col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="client-box  col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-9.png" class="img-fluid" alt="">
-            </div>
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-10.png" class="img-fluid" alt="">
-            </div>
-            <div class="client-box col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <img src="assets/img/clients/client-11.png" class="img-fluid" alt="">
-            </div>
-
+            <?php endforeach; ?>
         </div>
 
     </div>

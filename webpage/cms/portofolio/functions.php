@@ -1,6 +1,5 @@
 <?php
 
-
 function query($query)
 {
 	global $conn;
@@ -12,12 +11,12 @@ function query($query)
 	return $rows;
 }
 
-
 function tambah($data)
 {
 	global $conn;
 
 	$judul 		 = htmlspecialchars($data["judul"]);
+	$nama_port_cat  = htmlspecialchars($data["nama_port_cat"]);
 	$keterangan  = htmlspecialchars($data["keterangan"]);
 
 
@@ -28,13 +27,12 @@ function tambah($data)
 
 	$query = "INSERT INTO portofolio
 				VALUES
-				('', '$judul', '$keterangan', '$gambar')
+				('', '$nama_port_cat','$judul','$keterangan', '$gambar')
 			";
 	mysqli_query($conn, $query);
 
 	return mysqli_affected_rows($conn);
 }
-
 
 function upload()
 {
@@ -79,9 +77,6 @@ function upload()
 	return $namaFileBaru;
 }
 
-
-
-
 function hapus($id)
 {
 	global $conn;
@@ -94,13 +89,13 @@ function hapus($id)
 	}
 }
 
-
 function ubah($data)
 {
 	global $conn;
 
 	$id = $data["id"];
 	$judul = htmlspecialchars($data["judul"]);
+	$nama_port_cat  = htmlspecialchars($data["nama_port_cat"]);
 	$keterangan = htmlspecialchars($data["keterangan"]);
 	$gambarLama = htmlspecialchars($data["gambarLama"]);
 
@@ -114,6 +109,7 @@ function ubah($data)
 
 
 	$query = "UPDATE portofolio SET
+				nama_port_cat = '$nama_port_cat',
 				judul = '$judul',
 				gambar = '$gambar',
 				keterangan = '$keterangan'
@@ -122,5 +118,58 @@ function ubah($data)
 
 	mysqli_query($conn, $query);
 
+	return mysqli_affected_rows($conn);
+}
+
+/* -------------------------------------------- function portofolio category ------------------------------------- */
+
+function countPortofolioCategory()
+{
+	global $conn;
+	$result = mysqli_query($conn, "SELECT * FROM `portofolio_category`");
+	$countsteam = mysqli_num_rows($result);
+	return $countsteam;
+}
+
+function queryPortofolioCategory($query)
+{
+	global $conn;
+	$result = mysqli_query($conn, $query);
+	$rows = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$rows[] = $row;
+	}
+	return $rows;
+}
+
+function tambahPortofolioCategory($data)
+{
+	global $conn;
+	$nama_port_cat 		 = htmlspecialchars($data["nama_port_cat"]);
+	$query = "INSERT INTO portofolio_category
+				VALUES
+				('', '$nama_port_cat')
+			";
+	mysqli_query($conn, $query);
+	return mysqli_affected_rows($conn);
+}
+
+function hapusPortofolioCategory($id)
+{
+	global $conn;
+	mysqli_query($conn, "DELETE FROM portofolio_category WHERE id_port_cat = $id");
+	return mysqli_affected_rows($conn);
+}
+
+function ubahPortofolioCategory($data)
+{
+	global $conn;
+
+	$id_port_cat = $data["id_port_cat"];
+	$nama_port_cat  = htmlspecialchars($data["nama_port_cat"]);
+	$query = "UPDATE portofolio_category SET nama_port_cat = '$nama_port_cat'
+			  WHERE id_port_cat = $id_port_cat
+			";
+	mysqli_query($conn, $query);
 	return mysqli_affected_rows($conn);
 }

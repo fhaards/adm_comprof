@@ -49,6 +49,8 @@ if (!empty($_GET['company'])) {
 		require_once "portofolio/ubah.php";
 	} else if ($_GET['portofolio'] == 'delete') {
 		require_once "portofolio/hapus.php";
+	} else if ($_GET['portofolio'] == 'delete_category') {
+		require_once "portofolio/portofolio_category/hapus.php";
 	}
 } else if (!empty($_GET['team'])) {
 	require_once "team/functions.php";

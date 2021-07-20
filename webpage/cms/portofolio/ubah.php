@@ -42,13 +42,28 @@ if (isset($_POST["submitEditPorto"])) {
 					<input type="text" name="judul" id="judul" value="<?= $portofolio["judul"]; ?>" class="form-control">
 				</div>
 				<div class="form-group col-md-6">
+					<?php
+					$getPortCategory = queryPortofolioCategory("SELECT * FROM `portofolio_category`");
+					?>
+					<label for="nama">Kategori : </label>
+					<select name="nama_port_cat" id="nama_port_cat" class="form-control">
+						<option value="<?= $portofolio['nama_port_cat']; ?>"><?= $portofolio['nama_port_cat']; ?></option>
+						<option></option>
+						<?php foreach ($getPortCategory as $gPc) : ?>
+							<option value="<?= $gPc['nama_port_cat']; ?>"><?= $gPc['nama_port_cat']; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
 					<label for="keterangan">keterangan : </label>
 					<input type="text" name="keterangan" id="keterangan" value="<?= $portofolio["keterangan"]; ?>" class="form-control">
 				</div>
 				<div class="form-group col-md-6">
 					<label for="gambar">Gambar :</label> <br>
-					<img src="portofolio/img/<?= $portofolio['gambar']; ?>" width="80"> <br>
-					<input type="file" name="gambar" id="gambar" class="form-control">
+					<div class="d-flex flex-row">
+						<img src="portofolio/img/<?= $portofolio['gambar']; ?>" width="80"> <br>
+						<input type="file" name="gambar" id="gambar" class="form-control">
+					</div>
 				</div>
 			</div>
 		</div>

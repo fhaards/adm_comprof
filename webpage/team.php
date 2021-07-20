@@ -1,4 +1,4 @@
-<section id="team" class="team">
+<section id="team" class="team section-bg">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -10,25 +10,43 @@
         </div>
 
         <div class="row">
-            <?php 
-                $rowTeam = getQueryTeam("SELECT * FROM `team`");
+            <?php
+            $rowTeam = getQueryTeam("SELECT * FROM `team` WHERE jabatan IN ('Kepala Divisi','Direktur')");
+            $rowTeamMore = getQueryTeam("SELECT * FROM `team` WHERE jabatan NOT IN ('Kepala Divisi','Direktur')");
             ?>
             <?php foreach ($rowTeam as $rowsTeam) : ?>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="cms/team/img/<?= $rowsTeam['gambar']; ?>" class="img-fluid" alt="">
-                    </div>
-                    <div class="member-info">
-                        <h4><?= $rowsTeam['nama'];?></h4>
-                        <span><?= $rowsTeam['jabatan'];?></span>
-                        <p>( <?= $rowsTeam['difisi'];?> )</p>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <div class="member-img">
+                            <img src="cms/team/img/<?= $rowsTeam['gambar']; ?>" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4><?= $rowsTeam['nama']; ?></h4>
+                            <span><?= $rowsTeam['jabatan']; ?></span>
+                            <p><?= $rowsTeam['difisi']; ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php endforeach; ?>
 
+            <?php endforeach; ?>
         </div>
+        <div id="team-more" class="row">
+            <?php foreach ($rowTeamMore as $rowsTeamMore) : ?>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <div class="member-img">
+                            <img src="cms/team/img/<?= $rowsTeamMore['gambar']; ?>" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4><?= $rowsTeamMore['nama']; ?></h4>
+                            <span><?= $rowsTeamMore['jabatan']; ?></span>
+                            <p><?= $rowsTeamMore['difisi']; ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
     </div>
 
 

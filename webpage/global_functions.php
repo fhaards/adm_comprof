@@ -36,6 +36,26 @@ function getQueryClient($query){
 	return $rows;
 }
 
+function getRowPortofolio($query){
+	global $conn;
+	$result = mysqli_query($conn, $query);
+	$rows = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$rows[] = $row;
+	}
+	return $rows;
+}
+
+function getRowPortofolioCategory($query){
+	global $conn;
+	$result = mysqli_query($conn, $query);
+	$rows = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$rows[] = $row;
+	}
+	return $rows;
+}
+
 $getRowQueryCompany = getQueryCompany();
 $getRowQueryCompanyAbout = getQueryCompanyAbout();
 ?>

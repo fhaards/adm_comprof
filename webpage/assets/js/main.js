@@ -232,6 +232,8 @@
     },
   });
 
+
+
   /**
    * Porfolio isotope and filter
    */
@@ -322,7 +324,7 @@
 
   let btnShowAboutMore = document.getElementById("about-more-toggle");
   let showAboutFull = document.getElementById("about-full");
-  btnShowAboutMore.onclick = function(e){
+  btnShowAboutMore.onclick = function (e) {
     e.preventDefault();
     showAboutFull.classList.toggle("active");
     if (showAboutFull.classList.contains("active")) {
@@ -330,7 +332,7 @@
     } else {
       btnShowAboutMore.innerHTML = "Show More <i class='bx bx-down-arrow-alt'>";
     }
-  }
+  };
 
   let showMoreTeam = document.getElementById("team-more");
   let btnShowMoreTeam = document.getElementById("team-more-toggle");

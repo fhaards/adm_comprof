@@ -15,7 +15,7 @@
             $rowTeamMore = getQueryTeam("SELECT * FROM `team` WHERE jabatan NOT IN ('Kepala Divisi','Direktur')");
             ?>
             <?php foreach ($rowTeam as $rowsTeam) : ?>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-3 col-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
                             <img src="cms/team/img/<?= $rowsTeam['gambar']; ?>" class="img-fluid" alt="">
@@ -23,7 +23,10 @@
                         <div class="member-info">
                             <h4><?= $rowsTeam['nama']; ?></h4>
                             <span><?= $rowsTeam['jabatan']; ?></span>
-                            <p><?= $rowsTeam['difisi']; ?></p>
+                            <?php if ($rowsTeam['difisi'] == '') : ?>
+                            <?php else : ?>
+                                <p><?= $rowsTeam['difisi']; ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -32,7 +35,7 @@
         </div>
         <div id="team-more" class="row">
             <?php foreach ($rowTeamMore as $rowsTeamMore) : ?>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-3 col-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
                             <img src="cms/team/img/<?= $rowsTeamMore['gambar']; ?>" class="img-fluid" alt="">

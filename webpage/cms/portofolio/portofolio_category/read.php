@@ -51,32 +51,34 @@ $p_category = queryPortofolioCategory("SELECT * FROM `portofolio_category`");
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <form method="POST" action="">
-                        <?php foreach ($p_category as $rowPortCategory) : ?>
-                            <tr>
-                                <td><?= $i; ?></td>
-                                <td>
 
-                                    <div class="d-flex flex-row">
-                                        <div class="form-group mr-5">
-                                            <input type="hidden" name="id_port_cat" value="<?= $rowPortCategory['id_port_cat']; ?>">
-                                            <input type="text" name="nama_port_cat" id="nama_port_cat" value="<?= $rowPortCategory['nama_port_cat']; ?>" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" name="submitEditPortoCategory" class="btn btn-sm btn-info"> <span class="mr-2"> Edit </span> <i class="fa fa-pen"></i></button>
-                                        </div>
+                    <?php foreach ($p_category as $rowPortCategory) : ?>
+                        <tr>
+                            <td><?= $i; ?></td>
+                            <td>
+
+
+                                <form method="POST" action="" class="d-flex flex-row">
+                                    <div class="form-group mr-5">
+                                        <input type="hidden" name="id_port_cat" value="<?= $rowPortCategory['id_port_cat']; ?>">
+                                        <input type="text" name="nama_port_cat" id="nama_port_cat" value="<?= $rowPortCategory['nama_port_cat']; ?>" class="form-control">
                                     </div>
+                                    <div class="form-group">
+                                        <button type="submit" name="submitEditPortoCategory" class="btn btn-sm btn-info"> <span class="mr-2"> Edit </span> <i class="fa fa-pen"></i></button>
+                                    </div>
+                                </form>
 
-                                </td>
-                                <td>
-                                    <a href="index.php?portofolio=delete_category&id=<?= $rowPortCategory["id_port_cat"]; ?>" onclick="return confirm('yakin?');" class="btn btn-sm btn-danger rounded-circle">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <?php $i++; ?>
-                        <?php endforeach; ?>
-                    </form>
+
+                            </td>
+                            <td>
+                                <a href="index.php?portofolio=delete_category&id=<?= $rowPortCategory["id_port_cat"]; ?>" onclick="return confirm('yakin?');" class="btn btn-sm btn-danger rounded-circle">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
+
                 </tbody>
             </table>
         </div>

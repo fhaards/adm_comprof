@@ -72,7 +72,13 @@ $portofolio = query("SELECT * FROM portofolio");
 										<td><?php echo $row['judul']; ?></td>
 										<td><?php echo $row['nama_port_cat']; ?></td>
 										<td><?php echo $row['keterangan']; ?></td>
-										<td><img src="portofolio/img/<?= $row["gambar"]; ?>" width="50"></td>
+										<td>
+											<a href="portofolio/img/<?= $row["gambar"]; ?>" target="_blank">
+												<div class="img-port">
+													<img src="portofolio/img/<?= $row["gambar"]; ?>">
+												</div>
+											</a>
+										</td>
 										<td>
 											<a href="index.php?portofolio=update&id=<?= $row["id"]; ?>" class="btn btn-sm btn-info rounded-circle">
 												<i class="fa fa-pen"></i>

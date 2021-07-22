@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jul 2021 pada 00.04
+-- Waktu pembuatan: 22 Jul 2021 pada 12.08
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -53,6 +53,17 @@ CREATE TABLE `client` (
   `nama` varchar(100) NOT NULL,
   `gambar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `client`
+--
+
+INSERT INTO `client` (`id`, `nama`, `gambar`) VALUES
+(11, 'PATRAJASA', '60f60a4169747.png'),
+(12, 'ELNUSA', '60f60a5162d40.png'),
+(13, 'KEMENTRIAN PERTANIAN REPUBLIK INDONESIA', '60f60a65dde78.png'),
+(14, 'KEMENTRIAN PERHUBUNGAN REPUBLIK INDONESIA', '60f60a79de36d.png'),
+(15, 'BADAN PENGELOLA TRANSPORTASI JABODETABEK', '60f60a8f85815.png');
 
 -- --------------------------------------------------------
 
@@ -106,10 +117,42 @@ INSERT INTO `company_about` (`id_comp_about`, `comp_about`, `comp_visi`, `comp_m
 
 CREATE TABLE `portofolio` (
   `id` int(11) NOT NULL,
+  `nama_port_cat` text NOT NULL,
   `judul` varchar(100) NOT NULL,
   `keterangan` varchar(100) NOT NULL,
   `gambar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `portofolio`
+--
+
+INSERT INTO `portofolio` (`id`, `nama_port_cat`, `judul`, `keterangan`, `gambar`) VALUES
+(21, 'Arcrylic', 'Extra Supplier Gathering', 'Arcrylic for Extra Supplier Gathering PLN', '60f8322a163a0.jpeg'),
+(22, 'Arcrylic', 'Aqua Arcrylic', 'Aqua Arcrylic', '60f8337f28260.jpeg'),
+(23, 'Arcrylic', 'Acrylic Company Name Plate', 'Acrylic Company Plate for PT. Rahman Abdijaya ', '60f833ce0e50f.jpeg'),
+(24, 'Furnishing', 'Kitchen Set', '', '60f833f10b935.jpg'),
+(26, 'Construction', 'Build Construction and Maintenance', '', '60f834908873e.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `portofolio_category`
+--
+
+CREATE TABLE `portofolio_category` (
+  `id_port_cat` int(11) NOT NULL,
+  `nama_port_cat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `portofolio_category`
+--
+
+INSERT INTO `portofolio_category` (`id_port_cat`, `nama_port_cat`) VALUES
+(9, 'Construction'),
+(10, 'Furnishing'),
+(11, 'Arcrylic');
 
 -- --------------------------------------------------------
 
@@ -216,6 +259,12 @@ ALTER TABLE `portofolio`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `portofolio_category`
+--
+ALTER TABLE `portofolio_category`
+  ADD PRIMARY KEY (`id_port_cat`);
+
+--
 -- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
@@ -235,7 +284,7 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT untuk tabel `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `company`
@@ -253,7 +302,13 @@ ALTER TABLE `company_about`
 -- AUTO_INCREMENT untuk tabel `portofolio`
 --
 ALTER TABLE `portofolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT untuk tabel `portofolio_category`
+--
+ALTER TABLE `portofolio_category`
+  MODIFY `id_port_cat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`

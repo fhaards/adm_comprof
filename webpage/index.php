@@ -9,10 +9,15 @@ include "global_functions.php";
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title><?= $getRowQueryCompany['comp_name']; ?></title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="title" content="PT. Adidaya Duta Mitrakom">
+  <meta name="description" content="Excellence and Innovation Build into every design">
+  <meta name="keywords" content="admitrakom.com , PT. Adidaya Duta Mitrakom , Adidaya Duta Mitrakom , INTERIOR , CIVIL , ME , OFFICE FURNITURE , QUALITY NETWORK SERVICE , SECURITY SYSTEM , SOFTWARE DEVELOPMENT , HARDWARE , TRADING , MANPOWER OUTSOURCING">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="PT. Adidaya Duta Mitrakom">
+
 
   <!-- Favicons -->
   <link href="assets/img/brand/adm_icon1.ico" rel="icon">

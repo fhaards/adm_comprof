@@ -324,27 +324,32 @@
 
   let btnShowAboutMore = document.getElementById("about-more-toggle");
   let showAboutFull = document.getElementById("about-full");
+  let showMoreBtnText = document.getElementById("show-more-btn-text");
   btnShowAboutMore.onclick = function (e) {
     e.preventDefault();
     showAboutFull.classList.toggle("active");
+    showAboutFull.classList.toggle("slide-bottom");
     if (showAboutFull.classList.contains("active")) {
-      btnShowAboutMore.innerHTML = "Show Less <i class='bx bx-up-arrow-alt'>";
+      // showAboutFull.classList.add("slide-bottom");
+      showMoreBtnText.innerHTML = "Show Less <i class='bx bx-up-arrow-alt'>";
     } else {
-      btnShowAboutMore.innerHTML = "Show More <i class='bx bx-down-arrow-alt'>";
+      // showAboutFull.classList.remove("slide-bottom");
+      showMoreBtnText.innerHTML = "Show More <i class='bx bx-down-arrow-alt'>";
     }
   };
 
   let showMoreTeam = document.getElementById("team-more");
   let btnShowMoreTeam = document.getElementById("team-more-toggle");
+  let showMoreTeamBtnText = document.getElementById("show-more-team-btn-text");
   btnShowMoreTeam.onclick = function (e) {
     e.preventDefault();
     showMoreTeam.classList.toggle("active");
     if (showMoreTeam.classList.contains("active")) {
-      btnShowMoreTeam.innerHTML =
-        "Show Less Our Team <i class='bx bx-up-arrow-alt'>";
+      showMoreTeamBtnText.innerHTML =
+        "Show Less Team <i class='bx bx-up-arrow-alt'>";
     } else {
-      btnShowMoreTeam.innerHTML =
-        "Show More Our Team <i class='bx bx-down-arrow-alt'>";
+      showMoreTeamBtnText.innerHTML =
+        "Show More Team <i class='bx bx-down-arrow-alt'>";
     }
   };
 })();

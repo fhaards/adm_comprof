@@ -103,7 +103,7 @@
 
                     <div class="row d-flex flex-row justify-content-center align-items-center end-about">
                         <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                            <img src="cms/company/img/<?= $getRowQueryCompany['comp_logo2']; ?>"  class="img-fluid mb-5" lt="">
+                            <img src="cms/company/img/<?= $getRowQueryCompany['comp_logo2']; ?>" class="img-fluid mb-5" lt="">
                             <h1>
                                 INTERIOR | CIVIL | ME | OFFICE FURNITURE | QUALITY NETWORK SERVICE | SECURITY SYSTEM | SOFTWARE DEVELOPMENT | HARDWARE
                                 | TRADING | MANPOWER OUTSOURCING
@@ -116,8 +116,10 @@
 
         <div class="row d-flex align-items-center justify-content-center mt-5">
             <div class="col-lg-10 d-flex align-items-center justify-content-center">
+
                 <a class="show-more-btn" href="javascript:void(0)" id="about-more-toggle">
-                    Show More <i class='bx bx-down-arrow-alt'></i>
+                    <div class="show-more-btn-border"></div>
+                    <span id="show-more-btn-text" class="show-more-text">Show More <i class='bx bx-down-arrow-alt'></i></span>
                 </a>
             </div>
         </div>

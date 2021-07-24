@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Jul 2021 pada 12.08
+-- Waktu pembuatan: 24 Jul 2021 pada 23.15
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -63,7 +63,10 @@ INSERT INTO `client` (`id`, `nama`, `gambar`) VALUES
 (12, 'ELNUSA', '60f60a5162d40.png'),
 (13, 'KEMENTRIAN PERTANIAN REPUBLIK INDONESIA', '60f60a65dde78.png'),
 (14, 'KEMENTRIAN PERHUBUNGAN REPUBLIK INDONESIA', '60f60a79de36d.png'),
-(15, 'BADAN PENGELOLA TRANSPORTASI JABODETABEK', '60f60a8f85815.png');
+(15, 'BADAN PENGELOLA TRANSPORTASI JABODETABEK', '60f60a8f85815.png'),
+(16, 'MRT Jakarta', '60fc74a5523aa.png'),
+(17, 'KEMNAKER', '60fc74e85a135.png'),
+(18, 'Wendys', '60fc74fab414e.png');
 
 -- --------------------------------------------------------
 
@@ -217,12 +220,12 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `nama`, `jabatan`, `difisi`, `keterangan`, `gambar`) VALUES
-(3, 'JOKO WALUYO', 'DIREKTUR', '', '', '60f456a99a8a1.jpg'),
-(4, 'IKA', 'KEPALA DIVISI', 'DIVISI KEUANGAN DAN HRD', '', '60f457386ed70.jpg'),
-(5, 'AGUS SUNARNO', 'KEPALA DIVISI', 'DIVISI TEKNIK DAN ENGINEERING', '', '60f457730efd4.jpg'),
-(6, 'YOGIANO HERMAN S', 'KEPALA DIVISI', 'DIVISI PEMASARAN DAN MARKETING', '', '60f457c968730.jpg'),
-(7, 'HEFNI ACHYAR', 'HR', 'DIVISI KEUANGAN DAN HRD', '', '60f458919b945.jpg'),
-(8, 'EKA SETYANINGYUN', 'ADMINISTRASI KEUANGAN', 'DIVISI KEUANGAN DAN HRD', '', '60f458bc7297e.jpg');
+(3, 'JOKO WALUYO', 'DIREKTUR', '', '', '60fc740011dbd.png'),
+(4, 'IKA', 'KEPALA DIVISI', 'DIVISI KEUANGAN DAN HRD', '', '60fc7406c2761.png'),
+(5, 'AGUS SUNARNO', 'KEPALA DIVISI', 'DIVISI TEKNIK DAN ENGINEERING', '', '60fc740ce10d8.png'),
+(6, 'YOGIANO HERMAN S', 'KEPALA DIVISI', 'DIVISI PEMASARAN DAN MARKETING', '', '60fc7412676b1.png'),
+(7, 'HEFNI ACHYAR', 'HR', 'DIVISI KEUANGAN DAN HRD', '', '60fc7417c976c.png'),
+(8, 'EKA SETYANINGYUN', 'ADMINISTRASI KEUANGAN', 'DIVISI KEUANGAN DAN HRD', '', '60fc741da89ca.png');
 
 --
 -- Indexes for dumped tables
@@ -284,7 +287,7 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT untuk tabel `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `company`

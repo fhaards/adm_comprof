@@ -9,13 +9,13 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row  d-flex flex-row flex-xs-nowrap mobile-nowrap">
             <?php
             $rowTeam = getQueryTeam("SELECT * FROM `team` WHERE jabatan IN ('Kepala Divisi','Direktur')");
             $rowTeamMore = getQueryTeam("SELECT * FROM `team` WHERE jabatan NOT IN ('Kepala Divisi','Direktur')");
             ?>
             <?php foreach ($rowTeam as $rowsTeam) : ?>
-                <div class="col-lg-3 col-md-3 col-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-3 col-10 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
                             <img src="cms/team/img/<?= $rowsTeam['gambar']; ?>" class="img-fluid" alt="">
@@ -33,9 +33,9 @@
 
             <?php endforeach; ?>
         </div>
-        <div id="team-more" class="row">
+        <div id="team-more" class="row flex-row flex-xs-nowrap mobile-nowrap">
             <?php foreach ($rowTeamMore as $rowsTeamMore) : ?>
-                <div class="col-lg-3 col-md-3 col-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3 col-md-3 col-10 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
                             <img src="cms/team/img/<?= $rowsTeamMore['gambar']; ?>" class="img-fluid" alt="">
@@ -50,15 +50,23 @@
             <?php endforeach; ?>
         </div>
 
+
+        <div class="d-flex w-100 align-items-center justify-content-center mt-5">
+
+            <a class="show-more-btn" href="javascript:void(0)" id="team-more-toggle">
+                <div class="show-more-btn-border"></div>
+                <span id="show-more-team-btn-text" class="show-more-text">Show More Team <i class='bx bx-down-arrow-alt'></i></span>
+            </a>
+            <!-- <a class="btnshow-more-btn" href="javascript:void(0)" id="team-more-toggle">
+    <div class="show-more-btn-border"></div>
+    Show More Our Team <i class='bx bx-down-arrow-alt'></i>
+</a> -->
+        </div>
     </div>
 
 
 
-    <div class="d-flex w-100 align-items-center justify-content-center mt-5">
-        <a class="show-more-btn" href="javascript:void(0)" id="team-more-toggle">
-            Show More Our Team <i class='bx bx-down-arrow-alt'></i>
-        </a>
-    </div>
+
 
     </div>
 </section>
